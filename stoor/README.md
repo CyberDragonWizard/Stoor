@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
 
-## Available Scripts
+## Project Name
 
-In the project directory, you can run:
+Stoor
 
-### `yarn start`
+## Project Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Wireframes
 
-### `yarn test`
+Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Component Hierarchy
+Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
 
-### `yarn build`
+## API and Data Sample
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### MVP/PostMVP
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-### `yarn eject`
+#### MVP 
+*These are examples only. Replace with your own MVP features.*
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Find and use external api 
+- Render data on page 
+- Allow user to choose favorites 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### PostMVP  
+*These are examples only. Replace with your own Post-MVP features.*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Add second API
+- Use local storage to save user favorites
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Project Schedule
 
-## Learn More
+This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+|  Day | Deliverable | Status
+|---|---| ---|
+|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|July 13| Project Approval | Incomplete
+|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
+|July 14| Pseudocode / actual code | Incomplete
+|July 15| Initial Clickable Model  | Incomplete
+|July 16| MVP | Incomplete
+|July 17| Presentations | Incomplete
 
-### Code Splitting
+## Timeframes
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
 
-### Analyzing the Bundle Size
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| Total | H | 6hrs| 5hrs | 5hrs |
 
-### Making a Progressive Web App
+## SWOT Analysis
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### Strengths:
 
-### Advanced Configuration
+### Weaknesses:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Opportunities:
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Threats:
