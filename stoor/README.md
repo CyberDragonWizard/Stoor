@@ -6,19 +6,49 @@ Stoor
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Stoor is an inventory management app that allows a user to view, add, update, and delete inventory items.
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+https://i.imgur.com/lApmqbh.png
+https://i.imgur.com/UvrcVwR.png
+https://i.imgur.com/WLHOy8i.png
 
 ## Component Hierarchy
-Show your component hierarchy here! Use [this](https://cms-assets.tutsplus.com/uploads/users/1795/posts/30352/image/GettingStartedWithReduxTutorial-React-Component-Structure.png) as an example.
+
+https://ibb.co/kMvRjnV
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
-
+{
+    "records": [
+        {
+            "id": "rec1Zlq9IpeKZnJ8y",
+            "fields": {
+                "name": "Whole wheat bread",
+                "price": "$7.99",
+                "category": [
+                    "Soft drink"
+                ],
+                "amount": "9"
+            },
+            "createdTime": "2020-10-09T13:50:36.000Z"
+        },
+        {
+            "id": "rec9Lfj3rY7dwE30p",
+            "fields": {
+                "name": "Hand Soap",
+                "price": "$2.99",
+                "category": [
+                    "toiletries"
+                ],
+                "amount": "13"
+            },
+            "createdTime": "2020-10-09T13:50:39.000Z"
+        },
+        
+    ]
+}
 ### MVP/PostMVP
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
@@ -26,15 +56,20 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
+- Ase airtable api from airtable account
 - Render data on page 
-- Allow user to choose favorites 
+- Render an interactive inventory form from said data
+- Create an update button for the inventory form
+- Add an "add to iventory" form that adds data to the page and airtable
+- Add a "categories" option to only display specified categories
+- Make pretty with CSS
 
 #### PostMVP  
 *These are examples only. Replace with your own Post-MVP features.*
 
-- Add second API
-- Use local storage to save user favorites
+- Add a search bar
+- CSS animations
+- Use a CSS library like Bootstrap
 
 ## Project Schedule
 
@@ -44,13 +79,14 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|Oct 8-9| Prompt / Wireframes / Component Heirarchy / Timeframes / Approval / PsuedoCode| Incomplete
+|Oct 10| HTML/React Components | Incomplete
+|Oct 11| React Components / AirTable API | Incomplete
+|Oct 12| React Components | Incomplete
+|Oct 13| Initial Updateable Model  | Incomplete
+|Oct 14| MVP | Incomplete
+|Oct 15| Post MVP| Incomplete
+|Oct 16| Presentations | Incomplete
 
 ## Timeframes
 
@@ -60,16 +96,20 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Adding Form | H | 6hrs|  |  |
+| HTML | H | 3hrs|  |  |
+| React Components | H | 10hrs|  |  |
+| CSS| H | 9hrs|  |  |
+| Working with API | H | 3hrs|  |  |
+| JavaScript| H | 7hrs|  | |
+| Total | H | |  |  |
 
 ## SWOT Analysis
 
-### Strengths:
+### Strengths: Design
 
-### Weaknesses:
+### Weaknesses: Logic
 
-### Opportunities:
+### Opportunities: Develop more skills and comfort with React, JavaScript, and CSS
 
-### Threats:
+### Threats: Feeling inadequate which leads to stress.
