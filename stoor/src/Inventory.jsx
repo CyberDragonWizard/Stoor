@@ -23,7 +23,7 @@ class Inventory extends Component {
         const inventory = this.state.inventory;
         const render = inventory.map((airtable, index) => 
         <div> 
-        <h3>{airtable.fields.name}</h3>
+        <h3>{airtable.fields.item}</h3>
         <h2>{airtable.fields.price}</h2>
         <h2>{airtable.fields.category}</h2>
         <h2>{airtable.fields.amount}</h2>
