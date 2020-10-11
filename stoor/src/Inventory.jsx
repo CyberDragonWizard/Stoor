@@ -26,7 +26,7 @@ class Inventory extends Component {
         <h3>{airtable.fields.item}</h3>
         <h2>{airtable.fields.price}</h2>
         <h2>{airtable.fields.category}</h2>
-        <h2>{airtable.fields.amount}</h2>
+        <h2>{airtable.fields.amount}</h2
         </div>
         
         )
