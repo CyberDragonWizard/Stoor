@@ -6,6 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import Update from './UpdateButton'
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios'
 import './App'
@@ -33,7 +34,7 @@ const StyledTableCell = withStyles(() => ({
   head: {
     backgroundColor: '#c76b2e',
     color: 'white',
-    borderTopLeftRadius: '2px',
+  
   },
   body: {
     fontSize: 14,
@@ -43,7 +44,7 @@ const StyledTableCell = withStyles(() => ({
 const StyledTableRow = withStyles(() => ({
   root: {
     '&:nth-of-type(odd)': {
-      backgroundColor: '#e3e3e3',
+      backgroundColor: '#e8e8e8',
     },
   },
 }))(TableRow);
@@ -76,6 +77,7 @@ const useStyles = makeStyles({
   const classes = useStyles();
 
   return (
+    <div>
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
@@ -98,9 +100,13 @@ const useStyles = makeStyles({
             </StyledTableRow>
           ))}
         </TableBody>
+
       </Table>
+      
     </TableContainer>
-  );
+    <Update />
+    </div>
+  )
 }
 
 export default InventoryForm;

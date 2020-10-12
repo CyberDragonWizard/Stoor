@@ -25,3 +25,9 @@
   height: 200px;
 }
 
+.inputbox {
+  border: 1px solid black;
+  border-radius: 2px;
+  overflow: hidden;
+}
+

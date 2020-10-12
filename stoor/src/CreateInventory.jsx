@@ -9,12 +9,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexWrap: 'wrap',
     padding: '30px',
-    color: 'black'
+    color: 'black',
+    border: '1px solid black',
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: '25px',
+    width: '20px',
   },
 }));
 
@@ -24,12 +25,12 @@ export default function LayoutTextFields() {
   return (
     <div className={classes.root}>
         
-      <div>
+      <div className='inputbox'>
       <h3>Create Item</h3>
         <TextField
           id="standard-full-width"
 
-          style={{ margin: 18 }}
+          style={{ margin: 8 }}
           placeholder="New Item"
           fullWidth
           margin="normal"
@@ -40,7 +41,7 @@ export default function LayoutTextFields() {
         <TextField
           id="standard-full-width"
           label="Item"
-          style={{ margin: 18 }}
+          style={{ margin: 8 }}
           placeholder="Price"
           fullWidth
           margin="normal"
@@ -51,7 +52,7 @@ export default function LayoutTextFields() {
         <TextField
           id="standard-full-width"
           label="Item"
-          style={{ margin: 18 }}
+          style={{ margin: 8 }}
           placeholder="Category"
           fullWidth
           margin="normal"
@@ -62,7 +63,7 @@ export default function LayoutTextFields() {
         <TextField
           id="standard-full-width"
           label="Item"
-          style={{ margin: 18 }}
+          style={{ margin: 8 }}
           placeholder="Amount"
           fullWidth
           margin="normal"

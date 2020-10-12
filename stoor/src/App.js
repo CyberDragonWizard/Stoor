@@ -4,7 +4,7 @@ import Header from './header'
 import Sidebar from './sidebar'
 import './App.css';
 import InventoryForm from './InventoryMain';
-import TextField from './CreateInventory'
+import TextField from './CreateInventory';
 
 
 
@@ -16,6 +16,7 @@ function App() {
       <Sidebar />
       <InventoryForm />
       <TextField />
+
     </div>
   );
 }
