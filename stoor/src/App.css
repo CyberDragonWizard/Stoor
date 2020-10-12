@@ -10,13 +10,18 @@
 } */
 
 .appbar {
+  background-color: rgba(0, 19, 41, 0.932);
+  color: rgb(231, 231, 231);
+  /* width: 250px; */
+  /* height: 1000px; */
+  font-size: 100px;
+  border-radius: 0px;
+}
+
+.header {
   background-color: rgb(0, 19, 41);
   color: rgb(231, 231, 231);
-  width: 250px;
-  border-radius: 2px;
-  height: 100vh;
-  font-size: 100px;
+  margin: 0 auto;
+  height: 200px;
 }
-.stoor {
-  
-}
+

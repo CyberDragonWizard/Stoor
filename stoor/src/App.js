@@ -1,21 +1,21 @@
 import React from 'react';
 // import createItem from './CreateItem'
-// import Inventory from './Inventory'
 import Header from './header'
 import Sidebar from './sidebar'
 import './App.css';
-import CustomizedTables from './InventoryForm';
+import InventoryForm from './InventoryMain';
+import TextField from './CreateInventory'
+
 
 
 function App() {
   return (
     
     <div className="App">
-
       <Header />
       <Sidebar />
-      <CustomizedTables />
-
+      <InventoryForm />
+      <TextField />
     </div>
   );
 }
