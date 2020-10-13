@@ -1,38 +1,33 @@
-import React from 'react';
+import React  from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 
-import 'fontsource-roboto';
 import Typography from '@material-ui/core/Typography';
+import 'fontsource-montserrat';
 
 
 
 
 
-const header = () => {
+function Header() {
     
-// const useStyles = makeStyles({
+const useStyles = makeStyles({
 
-//     table: {
-//     maxWidth: 1200,
-//     margin: '0 auto',
-//           },
-//     font: {
-//     fontFamily: 'Courier New, Courier, monospace !important',
-//     fontSize: '15px',
-//     },
-// });
-
-// const classes = useStyles();
-
+    font: {
+    fontFamily: 'Montserrat',
+    },
+});
+    
+const classes = useStyles();
+    
     return(
         <AppBar class='header'>
-            <Typography variant='h2'>
+            <Typography className={classes.font} variant='h2'>
                 Stoor
-            </Typography>
-        </AppBar>
+            </Typography>    
+        </AppBar> 
     )
 }
 
-export default header;
+export default Header;

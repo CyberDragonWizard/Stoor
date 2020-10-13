@@ -15,7 +15,7 @@ const OutlinedButton = () => {
 
   return (
     <div className={classes.root}>
-      <Button variant="outlined">Add to Inventory</Button>
+      <Button type='submit 'variant="outlined">Add to Inventory</Button>
       
     </div>
   );

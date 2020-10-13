@@ -7,15 +7,17 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Update from './UpdateButton'
+import Checkbox from './Checkbox'
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios'
-import './App'
-import 'fontsource-roboto';
+import './App.css'
+import 'fontsource-montserrat';
 
 
 function InventoryForm() {
   const [items, setItems] = useState([]);
   const [fetchItems, setFetchItems] = useState();
+  
 
   useEffect(() => {
     const getInventory = async () => {
@@ -41,34 +43,27 @@ const StyledTableCell = withStyles(() => ({
   },
 }))(TableCell);
 
-const StyledTableRow = withStyles(() => ({
+const StyledTableRow = withStyles((theme) => ({
   root: {
     '&:nth-of-type(odd)': {
-      backgroundColor: '#e8e8e8',
+      backgroundColor: theme.palette.action.hover,
     },
   },
 }))(TableRow);
 
-// function inventoryData(item, price, category, amount) {
-//   return { item, price, category, amount };
-// }
-
-// const rows = [
-//   inventoryData('Budlight (bottle)', '$11.99 (case)' , 'Beer', 8),
-//   inventoryData('Budweiser (bottle)', '$11.99 (case)', 'Beer', 9),
-//   inventoryData('Black Ankle', '$39.99 (bottle)', 'Wine', 5),
-//   inventoryData('Lettuce', '$1.99 (head)', 'Food', 12),
-//   inventoryData('Tomatoes', '$10.00 (box)', 'Food', 3),
-// ];
 
 const useStyles = makeStyles({
   table: {
-    maxWidth: 1200,
-    margin: '0 auto',
+    width: 800,
+    maxHeight: 1000,
+    marginLeft: '300px',
+    marginTop: '100px',
+    border: '1px solid black'
     
+
   },
   font: {
-    fontFamily: 'Courier New, Courier, monospace !important',
+    fontFamily: 'Montserrat',
     fontSize: '20px',
   },
 });
@@ -77,11 +72,12 @@ const useStyles = makeStyles({
   const classes = useStyles();
 
   return (
-    <div>
+    <div> 
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
+          <StyledTableCell className={classes.font}></StyledTableCell>
             <StyledTableCell className={classes.font}>Item</StyledTableCell>
             <StyledTableCell className={classes.font} align="right">Price</StyledTableCell>
             <StyledTableCell className={classes.font} align="right">Category</StyledTableCell>
@@ -91,20 +87,21 @@ const useStyles = makeStyles({
         <TableBody>
           {items.map((item) => (
             <StyledTableRow key={item.item}>
+              <Checkbox />
               <StyledTableCell component="th" scope="row">
-                {item.item}
+                {item.fields.item}
               </StyledTableCell>
-              <StyledTableCell key={item.id} item={item} fetchItems={fetchItems} setFetchItems={setFetchItems} align="right">{item.price}</StyledTableCell>
-              <StyledTableCell align="right">{item.category}</StyledTableCell>
-              <StyledTableCell align="right">{item.amount}</StyledTableCell>
+              <StyledTableCell align="right">{item.fields.price}</StyledTableCell>
+              <StyledTableCell align="right">{item.fields.category}</StyledTableCell>
+              <StyledTableCell align="right">{item.fields.amount}</StyledTableCell>
             </StyledTableRow>
           ))}
+          
         </TableBody>
-
       </Table>
-      
+      <Update />
     </TableContainer>
-    <Update />
+    
     </div>
   )
 }
