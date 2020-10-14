@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import AddButton from './AddButton'
+import LogButton from './LogButton'
 import Paper from '@material-ui/core/Paper'; 
 import './App.css'
 
@@ -22,21 +22,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function LayoutTextFields(props) {
+export default function InputLogs(props) {
   const [item, setItem] = useState();
-  const [price, setPrice] = useState();
-  const [category, setCategory] = useState();
+  const [distributor, setDistributor] = useState();
+  const [date, setDate] = useState();
   const [amount, setAmount] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
       item,
-      price,
-      category,
+      distributor,
+      date,
       amount,
     };
-    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/inventory`;
+    const airtableURL = `https://api.airtable.com/v0/appVQlG6hFTjjeMQ9/log`;
     await axios.post(
       airtableURL,
       { fields },
@@ -46,10 +46,10 @@ export default function LayoutTextFields(props) {
         },
       }
     );
-    props.setFetchInventory(!props.fetchInventory);
+    props.setFetchLog(!props.fetchLog);
     setItem("");
-    setPrice("");
-    setCategory("");
+    setDistributor("");
+    setDate("");
     setAmount("");
   };
 
@@ -60,13 +60,13 @@ export default function LayoutTextFields(props) {
       <Paper elevation={3}>
         
       <form className='inputbox' onSubmit={handleSubmit}>
-      <h3>Create Item</h3>
+      <h3>Log Item</h3>
         <TextField
           id="standard-full-width"
           value={item}
-          label="Item"
+          label="Ordered Item"
           style={{ margin: 8 }}
-          placeholder="New Item"
+          placeholder="Ordered Item"
           fullWidth
           margin="normal"
           InputLabelProps={{
@@ -76,29 +76,29 @@ export default function LayoutTextFields(props) {
         />
         <TextField
           id="standard-full-width"
-          value={price}
-          label="Price"
+          value={distributor}
+          label="Distributor"
           style={{ margin: 8 }}
-          placeholder="Price"
+          placeholder="Distributor"
           fullWidth
           margin="normal"
           InputLabelProps={{
             shrink: true,
           }}
-          onChange={(e) => setPrice(e.target.value)}
+          onChange={(e) => setDistributor(e.target.value)}
         />
         <TextField
           id="standard-full-width"
-          value={category}
-          label="Category"
+          value={date}
+          label="Date"
           style={{ margin: 8 }}
-          placeholder="Category"
+          placeholder="Date Ordered"
           fullWidth
           margin="normal"
           InputLabelProps={{
             shrink: true,
           }}
-          onChange={(e) => setCategory(e.target.value)}
+          onChange={(e) => setDate(e.target.value)}
         />
         <TextField
           id="standard-full-width"
@@ -113,7 +113,7 @@ export default function LayoutTextFields(props) {
           }}
           onChange={(e) => setAmount(e.target.value)}
         />
-        <AddButton type='submit'/>
+        <LogButton type='submit'/>
         
       </form>
       </Paper>

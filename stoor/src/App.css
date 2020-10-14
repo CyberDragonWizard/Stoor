@@ -3,7 +3,7 @@
 }
 
 .appbar {
-  background-color: rgb(0, 19, 41);
+  background-color: rgb(0, 26, 56);
   color: rgb(231, 231, 231);
   width: 220px;
   height: 100vh;
@@ -14,20 +14,23 @@
   justify-content: center;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
   position: fixed;
+  border-right:3px solid orange; 
 
 }
 
 .header {
-  background-color: rgba(0, 19, 41, 0.74);
+  background-color: rgb(0, 26, 56);
   color: rgb(231, 231, 231);
   margin: 0 auto;
-  height: 100px;
+  height: 75px;
+  position: static;
+  border-bottom: 3px solid orange;
 }
 
 .inputbox {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   max-width: 500px;
   border-radius: 2px;
   overflow: hidden;

@@ -4,7 +4,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import { withTheme } from '@material-ui/styles';
+import { Link } from 'react-router-dom'
 import 'fontsource-montserrat';
 
 const useStyles = makeStyles((theme) => ({
@@ -29,13 +29,13 @@ export default function GroupedSelect() {
           <MenuItem value="">
               <em></em>
           </MenuItem>
-          <MenuItem value={1}>Beer</MenuItem>
-          <MenuItem value={2}>Wine</MenuItem>
-          <MenuItem value={3}>Food</MenuItem>
-          <MenuItem value={4}>Liquor</MenuItem>
-          <MenuItem value={5}>Soft drink</MenuItem>
-          <MenuItem value={6}>Clothing</MenuItem>
-          <MenuItem value={7}>Toiletries</MenuItem>
+          <MenuItem value={1}><Link to='/beer'>Beer</Link></MenuItem>
+          <MenuItem value={2}><Link to='/wine'>Wine</Link></MenuItem>
+          <MenuItem value={3}><Link to='/food'>Food</Link></MenuItem>
+          <MenuItem value={4}><Link to='/liquor'>Liquor</Link></MenuItem>
+          <MenuItem value={5}><Link to='/soft-drink'>Soft drink</Link></MenuItem>
+          <MenuItem value={6}><Link to='/clothing'>Clothing</Link></MenuItem>
+          <MenuItem value={7}><Link to='/toiletries'>Toiletries</Link></MenuItem>
         </Select>
       </FormControl>
     </div>

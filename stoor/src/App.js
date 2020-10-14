@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Header from './header'
 import Sidebar from './sidebar'
+import { Route } from 'react-router-dom';
 import './App.css';
 import axios from 'axios';
 import InventoryForm from './InventoryMain';
 import TextField from './CreateInventory';
+import Log from './Log'
+import InputLogs from './CreateLog'
 
 
 
@@ -12,6 +15,7 @@ import TextField from './CreateInventory';
 function App() {
   const [inventory, setInventory] = useState([]);
   const [fetchInventory, setFetchInventory] = useState(false);
+  const [fetchLog, setFetchLog] = useState(false);
 
   useEffect(() => {
     const getInventory = async () => {
@@ -27,12 +31,13 @@ function App() {
   }, [fetchInventory]);
   return (
     <div className="App">
+      
       <Header />
       <Sidebar />
+      <Route exact path='/'>
       <div class="tables">
         <div>
       <InventoryForm
-
         fetchInventory={fetchInventory}
         setFetchInventory={setFetchInventory}
        />
@@ -44,6 +49,24 @@ function App() {
       />
       </div>
       </div>
+      </Route>
+    <Route exact path='/log'>
+      <div class='tables'>
+        <div>
+      <Log
+      fetchLog={fetchLog} 
+      setFetchLog={setFetchLog}
+      />
+      </div>
+      <div>
+        <InputLogs 
+        fetchLog={fetchLog} 
+        setFetchLog={setFetchLog}
+        />
+      </div>
+      </div>
+    </Route>
+    
 
     </div>
   );

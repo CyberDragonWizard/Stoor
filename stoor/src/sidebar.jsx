@@ -2,6 +2,7 @@ import React from 'react';
 import Menu from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import GroupSelected from './Select'
 import './App.css';
@@ -12,9 +13,21 @@ const Sidebar = () => {
 
         font: {
         fontFamily: 'Montserrat',
-        paddingTop: '30px',
         color: 'white',
+        textDecoration: 'none',
         },
+        text: {
+        fontFamily: 'Montserrat',
+        color: 'white',
+        textDecoration: 'none',
+        marginRight: '15px',
+        fontSize: '17px'
+        },
+        nav: {
+            display: 'flex',
+            flexDirection: 'column'
+        }
+
     });
         
     const classes = useStyles();
@@ -23,11 +36,15 @@ const Sidebar = () => {
         <div>
         <Menu class='appbar' position='static'>
             <Typography className={classes.font} variant='h5'>
+                <nav className={classes.nav}>
                 <Button className={classes.font} href="#text-buttons" color="primary">
-                Inventory
+                <Link className={classes.text} to='/'>Inventory</Link>
                 </Button>
+                <Button className={classes.font} href="#text-buttons" color="primary">
+                <Link className={classes.text} to='/log'>LOG</Link>
+                </Button>
+                </nav>
             </Typography>
-            <GroupSelected className={classes.font}/>
         </Menu>
         </div>
         

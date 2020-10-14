@@ -14,23 +14,23 @@ import './App.css'
 import 'fontsource-montserrat';
 
 
-function InventoryForm() {
-  const [items, setItems] = useState([]);
-  const [fetchItems, setFetchItems] = useState();
+function LogForm() {
+  const [log, setLog] = useState([]);
+  const [fetchLog, setFetchLog] = useState();
   
 
   useEffect(() => {
     const getInventory = async () => {
-      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/inventory`;
+      const airtableURL = `https://api.airtable.com/v0/appVQlG6hFTjjeMQ9/log`;
       const response = await axios.get(airtableURL, {
         headers: {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
         },
       });
-      setItems(response.data.records);
+      setLog(response.data.records);
     };
     getInventory();
-  }, [fetchItems]);
+  }, [fetchLog]);
 
 const StyledTableCell = withStyles(() => ({
   head: {
@@ -83,20 +83,20 @@ const useStyles = makeStyles({
           <TableRow>
           <StyledTableCell></StyledTableCell>
             <StyledTableCell className={classes.font}>Item</StyledTableCell>
-            <StyledTableCell className={classes.font} align="right">Price</StyledTableCell>
-            <StyledTableCell className={classes.font} align="right">Category</StyledTableCell>
+            <StyledTableCell className={classes.font} align="right">Distributor</StyledTableCell>
+            <StyledTableCell className={classes.font} align="right">Date</StyledTableCell>
             <StyledTableCell className={classes.font} align="right">Amount</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {items.map((item) => (
+          {log.map((item) => (
             <StyledTableRow key={item.item}>
               <DeleteIcon />
               <StyledTableCell component="th" scope="row">
                 {item.fields.item}
               </StyledTableCell>
-              <StyledTableCell align="right">{item.fields.price}</StyledTableCell>
-              <StyledTableCell align="right">{item.fields.category}</StyledTableCell>
+              <StyledTableCell align="right">{item.fields.distributor}</StyledTableCell>
+              <StyledTableCell align="right">{item.fields.date}</StyledTableCell>
               <StyledTableCell align="right">{item.fields.amount}</StyledTableCell>
             </StyledTableRow>
           ))}
@@ -113,4 +113,4 @@ const useStyles = makeStyles({
   )
 }
 
-export default InventoryForm;
+export default LogForm;

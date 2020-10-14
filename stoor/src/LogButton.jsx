@@ -6,19 +6,19 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
-      backgroundColor: '#c76b2e',
     },
   },
 }));
 
-const OutlinedButtons = () => {
+const LogButton = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <Button onClick={() => { window.location.reload() }} variant="outlined">Update</Button>
+      <Button type='submit 'variant="outlined">Log Order</Button>
+      
     </div>
   );
 }
 
-export default OutlinedButtons;
+export default LogButton;
