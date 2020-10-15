@@ -30,7 +30,7 @@ export default function LogDeleteButton(props) {
       setDeleted(false);
     }, 800);
   };
-  console.log(props)
+ 
  
 
 
