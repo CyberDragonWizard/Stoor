@@ -109,9 +109,7 @@ const useStyles = makeStyles({
               fetchItems={fetchItems}
               setFetchItems={setFetchItems}
               />
-              <StyledTableCell component="th" scope="row">
-                {item.fields.item}
-              </StyledTableCell>
+              <StyledTableCell className={classes.cellfont} component="th" scope="row">{item.fields.item}</StyledTableCell>
               <StyledTableCell align="right">{item.fields.price}</StyledTableCell>
               <StyledTableCell align="right">{item.fields.category}</StyledTableCell>
               <StyledTableCell align="right">{item.fields.amount}</StyledTableCell>
