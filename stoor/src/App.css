@@ -32,7 +32,6 @@
 }
 
 .inputbox {
-  /* border: 1px solid black; */
   max-width: 500px;
   border-radius: 2px;
   overflow: hidden;

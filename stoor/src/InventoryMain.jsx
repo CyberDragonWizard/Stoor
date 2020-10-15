@@ -102,15 +102,6 @@ const useStyles = makeStyles({
         </TableHead>
         <TableBody>
           {items
-          // .sort((itemA, itemB) => {
-          //   if (itemA.item.toLowerCase() < itemB.item.toLowerCase()) {
-          //     return -1;
-          //   }
-          //   if (itemA.item.toLowerCase() > itemB.item.toLowerCase()) {
-          //     return 1;
-          //   }
-          //   return 0;
-          // })
           .map((item) => (
             <StyledTableRow key={item.item}>
               <DeleteIcon 
