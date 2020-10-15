@@ -7,7 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Update from './UpdateButton'
-import DeleteIcon from './DeleteIcon'
+import LogDeleteIcon from './LogDeleteIcon'
 import Paper from '@material-ui/core/Paper';
 import axios from 'axios'
 import './App.css'
@@ -15,7 +15,8 @@ import 'fontsource-montserrat';
 
 
 function LogForm() {
-  const [log, setLog] = useState([]);
+  const [logs, setLog] = useState([]);
+  const [fetchLog, setFetchLog] = useState(false);
 
 
   useEffect(() => {
@@ -99,15 +100,20 @@ const useStyles = makeStyles({
           </TableRow>
         </TableHead>
         <TableBody>
-          {log.map((item) => (
-            <StyledTableRow key={item.item}>
-              <DeleteIcon />
+          {logs.map((log) => (
+            <StyledTableRow key={log.log}>
+              <LogDeleteIcon 
+              key={log.id}
+              log={log}
+              fetchLog={fetchLog}
+              setFetchLog={setFetchLog}
+              />
               <StyledTableCell component="th" scope="row">
-                {item.fields.item}
+                {log.fields.item}
               </StyledTableCell>
-              <StyledTableCell align="right">{item.fields.distributor}</StyledTableCell>
-              <StyledTableCell align="right">{item.fields.date}</StyledTableCell>
-              <StyledTableCell align="right">{item.fields.amount}</StyledTableCell>
+              <StyledTableCell align="right">{log.fields.distributor}</StyledTableCell>
+              <StyledTableCell align="right">{log.fields.date}</StyledTableCell>
+              <StyledTableCell align="right">{log.fields.amount}</StyledTableCell>
             </StyledTableRow>
           ))}
           

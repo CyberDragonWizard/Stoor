@@ -14,19 +14,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DeleteButton(props) {
+export default function LogDeleteButton(props) {
   const [deleted, setDeleted] = useState(false);
 
   const handleDelete = async () => {
     setDeleted(true);
     setTimeout(async () => {
-      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/inventory/${props.item.id}`;
+      const airtableURL = `https://api.airtable.com/v0/appVQlG6hFTjjeMQ9/log/${props.log.id}`;
       await axios.delete(airtableURL, {
         headers: {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
         },
       });
-      props.setFetchItems(!props.fetchItems);
+      props.setFetchLog(!props.fetchLog);
       setDeleted(false);
     }, 800);
   };
