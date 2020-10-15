@@ -16,8 +16,7 @@ import 'fontsource-montserrat';
 
 function LogForm() {
   const [log, setLog] = useState([]);
-  const [fetchLog, setFetchLog] = useState();
-  
+
 
   useEffect(() => {
     const getInventory = async () => {
@@ -30,7 +29,7 @@ function LogForm() {
       setLog(response.data.records);
     };
     getInventory();
-  }, [fetchLog]);
+  }, []);
 
 const StyledTableCell = withStyles(() => ({
   head: {
@@ -58,11 +57,14 @@ const useStyles = makeStyles({
     width: 800,
     maxHeight: 700,
     marginLeft: '300px',
-    marginTop: '100px',
-    overflow: 'auto'
-    // border: '1px solid black'
-    
-
+    marginTop: '200px',
+    overflow: 'auto',
+    '@media(max-width: 1025px)': {
+      width: 600,
+      maxHeight: 500,
+      marginLeft: '100px',
+      marginTop: '200px',
+    }
   },
   font: {
     fontFamily: 'Montserrat',

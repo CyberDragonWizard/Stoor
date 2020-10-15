@@ -1,25 +1,42 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState } from 'react';
+import axios from 'axios';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import AddButton from './AddButton'
+import Paper from '@material-ui/core/Paper'; 
+import './App.css'
 
-function UpdateReview(props) {
-  const [item, setItem] = useState(props.inventory.fields.item);
-  const [price, setPrice] = useState(props.inventory.fields.price);
-  const [category, setCategory] = useState(props.inventory.fields.author);
-  const [amount, setAmount] = useState(props.inventory.fields.amount);
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    padding: '30px',
+    color: 'black',
+    marginRight: '100px',
+    marginTop: '300px'
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: '20px',
+  },
+}));
+
+export default function LayoutTextFields(props) {
+  const [item, setItem] = useState();
+  const [price, setPrice] = useState();
+  const [category, setCategory] = useState();
+  const [amount, setAmount] = useState();
 
   const handleSubmit = async (e) => {
-    // prevent page reload.
     e.preventDefault();
-    // we have to make a fields object that holds the item, text and author
     const fields = {
       item,
       price,
       category,
       amount,
     };
-    // make a POST request to our endpoint to create new data
-    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/inventory/${props.inventory.id}`;
-    // await axios.methodName(URL, request.body??, options)
+    const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/inventory`;
     await axios.put(
       airtableURL,
       { fields },
@@ -29,44 +46,11 @@ function UpdateReview(props) {
         },
       }
     );
-    // make another GET request?????
-    props.setFetchItems(!props.fetchItems);
-    // clear out our inputs so we can type something new in
+    props.setFetchInventory(!props.fetchInventory);
     setItem("");
     setPrice("");
     setCategory("");
     setAmount("");
   };
-
-  return (
-    <form className="update-form" onSubmit={handleSubmit}>
-      <label htmlFor="title">Title:</label>
-      <input
-        name="title"
-        type="text"
-        placeholder="title"
-        value={item}
-        onChange={(e) => setItem(e.target.value)}
-      />
-      <label htmlFor="text">Text:</label>
-      <input
-        name="text"
-        type="text"
-        placeholder="text"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-      />
-      <label htmlFor="author">Author:</label>
-      <input
-        name="author"
-        type="text"
-        placeholder="author"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-      />
-      <button type="submit">HAHA NICE</button>
-    </form>
-  );
+ handleSubmit();
 }
-
-export default UpdateReview;

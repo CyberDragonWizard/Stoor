@@ -14,14 +14,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonSizes(props) {
+export default function DeleteButton(props) {
 
-  const [deleted, setDeleted] = useState();
+  const [deleted, setDeleted] = useState(false);
 
   const handleDelete = async () => {
     setDeleted(true);
     setTimeout(async () => {
-      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/inventory/${props.item.id}`;
+      const airtableURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE}/inventory/${props.items.id}`;
       await axios.delete(airtableURL, {
         headers: {
           Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
@@ -35,13 +35,11 @@ export default function ButtonSizes(props) {
 
   return (
     <div>
-        <IconButton aria-label="delete" className={classes.margin} onClick={handleDelete}>
-        {deleted}
+        <IconButton aria-label="delete" className={classes.margin} >
           <DeleteIcon
-          item={props.item}
-          fetchInventory={props.fetchInventory}
-          setFetchInventory={props.setFetchInventory}
+          onClick={handleDelete}
            />
+           {deleted}
         </IconButton>
     </div>
   );

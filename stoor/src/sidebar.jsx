@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
-import GroupSelected from './Select'
 import './App.css';
 import 'fontsource-montserrat';
 
@@ -25,7 +24,10 @@ const Sidebar = () => {
         },
         nav: {
             display: 'flex',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            '@media(max-width: 1025px)': {
+                flexDirection: 'row'
+            }
         }
 
     });
@@ -34,7 +36,7 @@ const Sidebar = () => {
 
     return (
         <div>
-        <Menu class='appbar' position='static'>
+        <Menu class='appbar' position='relative'>
             <Typography className={classes.font} variant='h5'>
                 <nav className={classes.nav}>
                 <Button className={classes.font} href="#text-buttons" color="primary">

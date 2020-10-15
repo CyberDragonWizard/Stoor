@@ -16,7 +16,8 @@ import 'fontsource-montserrat';
 
 function InventoryForm() {
   const [items, setItems] = useState([]);
-  const [fetchItems, setFetchItems] = useState();
+  const [fetchItems, setFetchItems] = useState(false);
+  
   
 
   useEffect(() => {
@@ -58,11 +59,14 @@ const useStyles = makeStyles({
     width: 800,
     maxHeight: 700,
     marginLeft: '300px',
-    marginTop: '100px',
-    overflow: 'auto'
-    // border: '1px solid black'
-    
-
+    marginTop: '200px',
+    overflow: 'auto',
+    '@media(max-width: 1025px)': {
+      width: 600,
+      maxHeight: 500,
+      marginLeft: '100px',
+      marginTop: '200px',
+    }
   },
   font: {
     fontFamily: 'Montserrat',
@@ -91,7 +95,12 @@ const useStyles = makeStyles({
         <TableBody>
           {items.map((item) => (
             <StyledTableRow key={item.item}>
-              <DeleteIcon />
+              <DeleteIcon 
+              key={item.id}
+              item={item}
+              fetchItems={fetchItems}
+              setFetchItems={setFetchItems}
+              />
               <StyledTableCell component="th" scope="row">
                 {item.fields.item}
               </StyledTableCell>

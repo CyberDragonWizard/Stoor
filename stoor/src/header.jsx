@@ -1,5 +1,4 @@
 import React  from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import FormatListBulletedOutlinedIcon from '@material-ui/icons/FormatListBulletedOutlined';
@@ -34,14 +33,14 @@ const useStyles = makeStyles({
 const classes = useStyles();
     
     return(
-        <AppBar class='header'>
+        <header className='header'>
             <div className={classes.div}>
             <FormatListBulletedOutlinedIcon className={classes.icon}/>
             <Typography className={classes.font} variant='h2'>
                 Store Manager
             </Typography>   
             </div> 
-        </AppBar> 
+        </header> 
     )
 }
 

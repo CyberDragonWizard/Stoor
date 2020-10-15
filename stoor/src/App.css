@@ -14,7 +14,7 @@
   justify-content: center;
   top: 0;
   left: 0;
-  z-index: -1;
+  /* z-index: -1; */
   position: fixed;
   border-right:3px solid orange; 
 
@@ -25,7 +25,8 @@
   color: rgb(231, 231, 231);
   margin: 0 auto;
   height: 75px;
-  position: static;
+  width: 100%;
+  position: fixed;
   border-bottom: 3px solid orange;
 }
 
@@ -40,5 +41,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1025px) {
+  .appbar {
+    height: 50px;
+    width: 100%;
+    margin-top: 77px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: none;
+  }
 }
 
