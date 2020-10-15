@@ -61,7 +61,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Render an interactive inventory form from said data
 - Create an update button for the inventory form
 - Add an "add to iventory" form that adds data to the page and airtable
-- Add a "categories" option to only display specified categories
+- Add a "log" tab to log data
 - Make pretty with CSS
 
 #### PostMVP  
