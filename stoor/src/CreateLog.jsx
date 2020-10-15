@@ -13,7 +13,11 @@ const useStyles = makeStyles((theme) => ({
     padding: '30px',
     color: 'black',
     marginRight: '100px',
-    marginTop: '300px'
+    marginTop: '300px',
+    '@media(max-width: 865px)': {
+      marginTop: '20px',
+      marginLeft: '120px'
+    }
   },
   textField: {
     marginLeft: theme.spacing(1),

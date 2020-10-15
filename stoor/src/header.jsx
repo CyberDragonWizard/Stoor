@@ -15,12 +15,20 @@ const useStyles = makeStyles({
 
     font: {
     fontFamily: 'Montserrat',
-    letterSpacing: '5px'
+    letterSpacing: '5px',
+    '@media(max-width: 603px)': {
+        fontSize: '30px',
+        paddingTop: '10px'
+    }
     },
     icon: {
         fontSize: '60px',
         marginTop: '10px',
-        marginRight: '20px'
+        marginRight: '20px',
+        '@media(max-width: 603px)': {
+            fontSize: '30px',
+            paddingTop: '3px'
+        }
 
     },
     div: {

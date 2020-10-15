@@ -63,14 +63,22 @@ const useStyles = makeStyles({
     overflow: 'auto',
     '@media(max-width: 1025px)': {
       width: 600,
-      maxHeight: 500,
+      maxHeight: 800,
       marginLeft: '100px',
       marginTop: '200px',
+    },
+    '@media(max-width: 700px)': {
+      width: '400px',
+      marginLeft: '50px',
+
     }
   },
   font: {
     fontFamily: 'Montserrat',
     fontSize: '20px',
+    '@media(max-width: 550px)': {
+      fontSize: '12px',
+    }
   },
 });
 
