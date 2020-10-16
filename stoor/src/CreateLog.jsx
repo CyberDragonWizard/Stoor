@@ -64,7 +64,7 @@ export default function InputLogs(props) {
       <Paper elevation={3}>
         
       <form className='inputbox' onSubmit={handleSubmit}>
-      <h3>Log Item</h3>
+      <h3>Log Order</h3>
         <TextField
           id="standard-full-width"
           value={item}
