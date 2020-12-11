@@ -96,13 +96,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 6hrs|  |  |
-| HTML | H | 3hrs|  |  |
-| React Components | H | 10hrs|  |  |
-| CSS| H | 9hrs|  |  |
-| Working with API | H | 3hrs|  |  |
-| JavaScript| H | 7hrs|  | |
-| Total | H | |  |  |
+| Adding Form | H | 6hrs| 6hrs | 6hrs |
+| HTML | H | 3hrs| 2hrs | 2hrs |
+| React Components | H | 10hrs| 9hrs | 9hrs |
+| CSS| H | 9hrs| 10hrs |  10hrs|
+| Working with API | H | 3hrs| 3hrs | 3hrs |
+| JavaScript| H | 7hrs| 7hrs |7hrs |
+| Total | H | 38hrs| 40hrs | 40hrs |
 
 ## SWOT Analysis
 
